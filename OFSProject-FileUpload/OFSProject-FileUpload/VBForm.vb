@@ -24,17 +24,17 @@ Public Class VBForm
 
                 Case Button1.Name
 
-                    Dim anothergreatvariable As String
+                    Dim fName As String
+                    Static client As IAmazonS3
 
+                    OpenFile.ShowDialog()
 
-                    OpenFileDialog1.ShowDialog()
+                    fName = OpenFile.FileName
+                    client = New AmazonS3Client(Amazon.RegionEndpoint.USEast1)
 
-                    anothergreatvariable = OpenFileDialog1.FileName
-                    Using wc As New System.Net.WebClient()
-                        wc.UploadFile("https://78cirdegtd.execute-api.us-east-1.amazonaws.com/default/textileEndpoint" & anothergreatvariable, anothergreatvariable)
-
-                    End Using
-
+                    Dim bucket = New PutBucketRequest()
+                    bucket.BucketName = "UsiTextilesBucket"
+                    client.PutBucket(bucket)
 
                 Case Button2.Name
 

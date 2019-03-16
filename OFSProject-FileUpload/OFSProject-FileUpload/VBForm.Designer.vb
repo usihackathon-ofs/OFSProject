@@ -24,7 +24,7 @@ Partial Class VBForm
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFile = New System.Windows.Forms.OpenFileDialog()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,10 +48,9 @@ Partial Class VBForm
         Me.Button2.Text = "Submit File"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'OpenFileDialog1
+        'OpenFile
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        Me.OpenFileDialog1.Filter = "*.csv|*.xls|*.xlsx|"
+        Me.OpenFile.Filter = "*.csv|*.xls|*.xlsx|"
         '
         'DataGridView1
         '
@@ -78,6 +77,6 @@ Partial Class VBForm
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents OpenFile As OpenFileDialog
     Friend WithEvents DataGridView1 As DataGridView
 End Class
