@@ -76,6 +76,7 @@ Public Class VBForm
 
     Public Function AddFileToFolder(FileName As String, bucketName As String, folderName As String) As String
         Dim returnval As String = "File Success"
+        Button2.Enabled = True
         Try
             Try
                 Dim path As String = FileName
@@ -103,7 +104,7 @@ Public Class VBForm
 
     End Sub
 
-    Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FolderToolStripMenuItem.Click
+    Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 

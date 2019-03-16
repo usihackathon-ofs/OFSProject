@@ -40,7 +40,7 @@ Partial Class Preferences
         'secretKey
         '
         Me.secretKey.AutoSize = True
-        Me.secretKey.Location = New System.Drawing.Point(89, 111)
+        Me.secretKey.Location = New System.Drawing.Point(12, 111)
         Me.secretKey.Name = "secretKey"
         Me.secretKey.Size = New System.Drawing.Size(54, 13)
         Me.secretKey.TabIndex = 1

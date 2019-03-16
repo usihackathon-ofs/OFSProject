@@ -32,7 +32,7 @@ Partial Class VBForm
         Me.EndToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,6 +58,7 @@ Partial Class VBForm
         Me.Button2.BackColor = System.Drawing.SystemColors.Control
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.Button2.Enabled = False
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
@@ -70,7 +71,7 @@ Partial Class VBForm
         '
         'OpenFileDialog
         '
-        Me.OpenFileDialog.Filter = "Text Files|*.txt"
+        Me.OpenFileDialog.Filter = "Spreadsheet files|.xlsx|.csv|"
         '
         'MenuStrip1
         '
@@ -93,12 +94,12 @@ Partial Class VBForm
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(91, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
         '
         'EndToolStripMenuItem
         '
         Me.EndToolStripMenuItem.Name = "EndToolStripMenuItem"
-        Me.EndToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
+        Me.EndToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EndToolStripMenuItem.Text = "&End"
         '
         'SettingsToolStripMenuItem
@@ -111,16 +112,19 @@ Partial Class VBForm
         '
         'PreferencesToolStripMenuItem
         '
-        Me.PreferencesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FolderToolStripMenuItem})
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
         Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
-        'FolderToolStripMenuItem
+        'Label1
         '
-        Me.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem"
-        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.FolderToolStripMenuItem.Text = "Folder"
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.LightGray
+        Me.Label1.Location = New System.Drawing.Point(36, 283)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(173, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Only .csv and .xlsx files are allowed"
         '
         'VBForm
         '
@@ -129,6 +133,7 @@ Partial Class VBForm
         Me.BackgroundImage = Global.OFSProject_FileUpload.My.Resources.Resources.landscape_2124022_1920
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(471, 332)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -153,5 +158,5 @@ Partial Class VBForm
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreferencesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
-    Friend WithEvents FolderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class
