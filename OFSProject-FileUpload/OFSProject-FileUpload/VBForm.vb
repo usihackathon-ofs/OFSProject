@@ -16,33 +16,43 @@ Public Class VBForm
 
     Private Sub ButtonClick(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
         Dim btn As Button
+
+
         Try
             btn = DirectCast(sender, Button)
             Select Case btn.Name
 
                 Case Button1.Name
+                    Settings.Bucketname = "usitextilesbucket"
+                    lblSend.Text = ""
                     Static client As IAmazonS3
+                    client = New AmazonS3Client(Amazon.RegionEndpoint.USEast1)
+                    Dim Transfer As New Amazon.S3.Transfer.TransferUtility(client)
+                    Dim Uploads As New Amazon.S3.Transfer.TransferUtilityUploadRequest
 
+                    Dim FilePath As String
                     OpenFile.ShowDialog()
 
-                    Settings.fName = OpenFile.FileName
+                    Settings.KeyName = OpenFile.FileName
 
-                    client = New AmazonS3Client(Amazon.RegionEndpoint.USEast1)
 
-                    Dim bucket = New PutBucketRequest()
+                    FilePath = System.IO.Path.GetFullPath(OpenFile.FileName)
 
-                    bucket.BucketName = Settings.Bucketname
+                    Uploads.BucketName = Settings.Bucketname & "\"
+                    Uploads.FilePath = FilePath
 
-                    client.PutBucket(bucket)
+                    '                    Transfer.UploadAsync(Uploads)
+                    Transfer.UploadAsync(Uploads)
+                    lblSend.Text = "Successfully Sent"
+
 
                 Case Button2.Name
-
 
             End Select
 
         Catch ex As Exception
+            lblSend.Text = "Failure"
             MessageBox.Show(ex.Message)
-
 
         End Try
 
