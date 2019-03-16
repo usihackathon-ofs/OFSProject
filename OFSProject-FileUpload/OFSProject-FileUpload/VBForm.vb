@@ -7,6 +7,9 @@ Imports Amazon.S3
 Imports Amazon.S3.Transfer
 Imports Amazon.S3.Model
 
+Const AWS_ACCESS_KEY As String = "AKIAIVYIWYRCTAMY2LRA"
+Const AWS_SECRET_KEY As String = "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"
+
 Public Class VBForm
     Private Sub VBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
