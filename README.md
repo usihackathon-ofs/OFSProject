@@ -11,3 +11,5 @@ Github integration is found here: https://visualstudio.github.com/
  - vb source example https://forums.aws.amazon.com/thread.jspa?threadID=265353
 
   - AWS SDK for VS download link: https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2017
+  
+  - AWS bucket transfer example: https://docs.aws.amazon.com/AmazonS3/latest/dev/HLuploadFileDotNet.html
