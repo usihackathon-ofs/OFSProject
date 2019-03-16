@@ -7,6 +7,7 @@ Imports Amazon.S3
 Imports Amazon.S3.Transfer
 Imports Amazon.S3.Model
 Imports Amazon.S3.Util
+Imports System.IO
 
 
 
@@ -18,7 +19,7 @@ Public Class VBForm
     Private Sub ButtonClick(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
         Dim btn As Button
 
-        client = New AmazonS3Client(Amazon.RegionEndpoint.USEast1)
+        client = New AmazonS3Client("AKIAJISGWZWFMHZGCNHQ", "sGGDwP52bCLHmkFY5/HFEEKc/Zc5lH6KA7SyHGpj", Amazon.RegionEndpoint.USEast1)
 
         Try
             btn = DirectCast(sender, Button)
@@ -29,21 +30,13 @@ Public Class VBForm
                     Dim Transfer As New Amazon.S3.Transfer.TransferUtility(client)
                     Dim Uploads As New Amazon.S3.Transfer.TransferUtilityUploadRequest
 
-                    Dim FilePath As String
+                    Dim FileTrans As String
                     OpenFileDialog.ShowDialog()
-
-                    Settings.KeyName = OpenFileDialog.FileName
-
-
-                    FilePath = System.IO.Path.GetFullPath(OpenFileDialog.FileName)
-
-                    Uploads.BucketName = Settings.Bucketname & "/"
-                    Uploads.FilePath = FilePath
-
-                    '                    Transfer.UploadAsync(Uploads)
-                    Transfer.UploadAsync(Uploads)
+                    Settings.fName = OpenFileDialog.FileName
 
 
+                    FileTrans = AddFileToFolder(Settings.fName, Settings.Bucketname, "NEW")
+                    MessageBox.Show(FileTrans)
                 Case Button2.Name
 
             End Select
@@ -70,7 +63,7 @@ Public Class VBForm
                     If (Not IsNothing(amazonS3Exception.ErrorCode) And amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId")) Or amazonS3Exception.ErrorCode.Equals("InvalidSecurity") Then
                         returnval = "Check the provided AWS Credentials."
                     Else
-                        returnval = String.Format("Error occurred. Message:'{0}' when writing an object", amazonS3Exception.Message)
+                        returnval = String.Format("Error occurred. Message: '{0}' when writing an object", amazonS3Exception.Message)
                     End If
                 End If
             End Try
@@ -82,7 +75,7 @@ Public Class VBForm
     End Function
 
     Public Function AddFileToFolder(FileName As String, bucketName As String, folderName As String) As String
-        Dim returnval As String = ""
+        Dim returnval As String = "File Success"
         Try
             Try
                 Dim path As String = FileName
@@ -100,6 +93,7 @@ Public Class VBForm
                 returnval = ex.Message
             End Try
         Catch ex As AmazonS3Exception
+            MessageBox.Show(ex.Message)
             returnval = ex.Message
         End Try
         Return returnval
