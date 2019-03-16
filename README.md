@@ -7,4 +7,6 @@ Link is found here: https://visualstudio.microsoft.com/services/live-share/
 Github integration is found here: https://visualstudio.github.com/
 
 Liveshare code to edit with me: https://insiders.liveshare.vsengsaas.visualstudio.com/join?B5DF579B154A02829E8FD9832F56D77ABB77
-https://forums.aws.amazon.com/thread.jspa?threadID=265353
+
+
+vb source example https://forums.aws.amazon.com/thread.jspa?threadID=265353
