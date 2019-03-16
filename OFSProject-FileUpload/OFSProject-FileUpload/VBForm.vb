@@ -106,4 +106,8 @@ Public Class VBForm
     Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FolderToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub PreferencesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreferencesToolStripMenuItem.Click
+        Preferences.Show()
+    End Sub
 End Class

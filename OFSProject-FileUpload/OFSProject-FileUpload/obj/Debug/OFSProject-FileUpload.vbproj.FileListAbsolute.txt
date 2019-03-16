@@ -370,3 +370,4 @@ C:\Users\sutto\Source\Repos\usihackathon-ofs\OFSProject\OFSProject-FileUpload\OF
 C:\Users\sutto\Source\Repos\usihackathon-ofs\OFSProject\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.exe
 C:\Users\sutto\Source\Repos\usihackathon-ofs\OFSProject\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.xml
 C:\Users\sutto\Source\Repos\usihackathon-ofs\OFSProject\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.pdb
+C:\Users\sutto\Source\Repos\usihackathon-ofs\OFSProject\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject_FileUpload.Preferences.resources
