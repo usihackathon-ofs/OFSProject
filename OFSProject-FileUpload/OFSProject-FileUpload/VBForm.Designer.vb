@@ -71,7 +71,7 @@ Partial Class VBForm
         '
         'OpenFileDialog
         '
-        Me.OpenFileDialog.Filter = "Spreadsheet files|.xlsx|.csv|"
+        Me.OpenFileDialog.Filter = "CSV Files|*.csv"
         '
         'MenuStrip1
         '
@@ -113,7 +113,7 @@ Partial Class VBForm
         'PreferencesToolStripMenuItem
         '
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'Label1
@@ -142,6 +142,7 @@ Partial Class VBForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "VBForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "File Select"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

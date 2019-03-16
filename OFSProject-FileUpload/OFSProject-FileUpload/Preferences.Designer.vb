@@ -27,12 +27,14 @@ Partial Class Preferences
         Me.commonKeyTxt = New System.Windows.Forms.TextBox()
         Me.secretKeyTxt = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtBucketName = New System.Windows.Forms.TextBox()
+        Me.lblBucketNameDesc = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'commonKey
         '
         Me.commonKey.AutoSize = True
-        Me.commonKey.Location = New System.Drawing.Point(89, 36)
+        Me.commonKey.Location = New System.Drawing.Point(89, 7)
         Me.commonKey.Name = "commonKey"
         Me.commonKey.Size = New System.Drawing.Size(0, 13)
         Me.commonKey.TabIndex = 0
@@ -40,7 +42,7 @@ Partial Class Preferences
         'secretKey
         '
         Me.secretKey.AutoSize = True
-        Me.secretKey.Location = New System.Drawing.Point(12, 111)
+        Me.secretKey.Location = New System.Drawing.Point(12, 82)
         Me.secretKey.Name = "secretKey"
         Me.secretKey.Size = New System.Drawing.Size(54, 13)
         Me.secretKey.TabIndex = 1
@@ -48,16 +50,16 @@ Partial Class Preferences
         '
         'commonKeyTxt
         '
-        Me.commonKeyTxt.Location = New System.Drawing.Point(126, 68)
+        Me.commonKeyTxt.Location = New System.Drawing.Point(57, 40)
         Me.commonKeyTxt.Name = "commonKeyTxt"
-        Me.commonKeyTxt.Size = New System.Drawing.Size(100, 20)
+        Me.commonKeyTxt.Size = New System.Drawing.Size(272, 20)
         Me.commonKeyTxt.TabIndex = 2
         '
         'secretKeyTxt
         '
-        Me.secretKeyTxt.Location = New System.Drawing.Point(126, 139)
+        Me.secretKeyTxt.Location = New System.Drawing.Point(57, 110)
         Me.secretKeyTxt.Name = "secretKeyTxt"
-        Me.secretKeyTxt.Size = New System.Drawing.Size(100, 20)
+        Me.secretKeyTxt.Size = New System.Drawing.Size(272, 20)
         Me.secretKeyTxt.TabIndex = 3
         '
         'Button1
@@ -69,17 +71,36 @@ Partial Class Preferences
         Me.Button1.Text = "Submit"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'txtBucketName
+        '
+        Me.txtBucketName.Location = New System.Drawing.Point(57, 172)
+        Me.txtBucketName.Name = "txtBucketName"
+        Me.txtBucketName.Size = New System.Drawing.Size(272, 20)
+        Me.txtBucketName.TabIndex = 6
+        '
+        'lblBucketNameDesc
+        '
+        Me.lblBucketNameDesc.AutoSize = True
+        Me.lblBucketNameDesc.Location = New System.Drawing.Point(12, 144)
+        Me.lblBucketNameDesc.Name = "lblBucketNameDesc"
+        Me.lblBucketNameDesc.Size = New System.Drawing.Size(75, 13)
+        Me.lblBucketNameDesc.TabIndex = 5
+        Me.lblBucketNameDesc.Text = "Bucket Name:"
+        '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(365, 267)
+        Me.Controls.Add(Me.txtBucketName)
+        Me.Controls.Add(Me.lblBucketNameDesc)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.secretKeyTxt)
         Me.Controls.Add(Me.commonKeyTxt)
         Me.Controls.Add(Me.secretKey)
         Me.Controls.Add(Me.commonKey)
         Me.Name = "Preferences"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Preferences"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -91,4 +112,6 @@ Partial Class Preferences
     Friend WithEvents commonKeyTxt As TextBox
     Friend WithEvents secretKeyTxt As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents txtBucketName As TextBox
+    Friend WithEvents lblBucketNameDesc As Label
 End Class
