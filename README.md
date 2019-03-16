@@ -17,6 +17,5 @@ Github integration is found here: https://visualstudio.github.com/
   - AWS Security
       - User ID: 202010716191
       - UserName: usi
-      - Access Key ID: AKIAI4ICWUUYPSCBLLJA
-      - Secret Access Key: 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
-      - 
+      - Access key ID	Secret access key
+      - AKIAJLKN7MIDCS2K2U3Q	jjsP7QG0Hv/B4j+bpTWGC2SM8rmosJN2BEt8L7Ux
