@@ -107,5 +107,7 @@ Public Class VBForm
         Preferences.Show()
     End Sub
 
-
+    Private Sub EndToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EndToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
 End Class
