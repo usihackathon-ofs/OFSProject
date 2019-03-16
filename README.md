@@ -15,5 +15,5 @@ Github integration is found here: https://visualstudio.github.com/
   - AWS bucket transfer example: https://docs.aws.amazon.com/AmazonS3/latest/dev/HLuploadFileDotNet.html
 
   - AWS Security
-      - Const AWS_ACCESS_KEY As String = "AKIAIVYIWYRCTAMY2LRA"
-      - Const AWS_SECRET_KEY As String = "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"
+      - Access Key ID: AKIAI4ICWUUYPSCBLLJA
+      - Secret Access Key: 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
