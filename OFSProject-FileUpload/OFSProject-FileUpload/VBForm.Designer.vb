@@ -32,6 +32,7 @@ Partial Class VBForm
         Me.EndToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblSend = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,7 +58,7 @@ Partial Class VBForm
         '
         'OpenFile
         '
-        Me.OpenFile.Filter = "*.csv|*.xls|*.xlsx|"
+        Me.OpenFile.Filter = "Text Files|*.txt"
         '
         'DataGridView1
         '
@@ -107,11 +108,21 @@ Partial Class VBForm
         Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
+        'lblSend
+        '
+        Me.lblSend.AutoSize = True
+        Me.lblSend.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSend.Location = New System.Drawing.Point(150, 259)
+        Me.lblSend.Name = "lblSend"
+        Me.lblSend.Size = New System.Drawing.Size(0, 18)
+        Me.lblSend.TabIndex = 4
+        '
         'VBForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(531, 332)
+        Me.Controls.Add(Me.lblSend)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -137,4 +148,5 @@ Partial Class VBForm
     Friend WithEvents EndToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreferencesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblSend As Label
 End Class
