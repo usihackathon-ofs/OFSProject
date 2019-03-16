@@ -15,5 +15,8 @@ Github integration is found here: https://visualstudio.github.com/
   - AWS bucket transfer example: https://docs.aws.amazon.com/AmazonS3/latest/dev/HLuploadFileDotNet.html
 
   - AWS Security
+      - User ID: 202010716191
+      - UserName: usi
       - Access Key ID: AKIAI4ICWUUYPSCBLLJA
       - Secret Access Key: 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
+      - 
