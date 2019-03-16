@@ -1,0 +1,15 @@
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\OFSProject-FileUpload.exe.config
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\OFSProject-FileUpload.exe
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\OFSProject-FileUpload.pdb
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\OFSProject-FileUpload.xml
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\Microsoft.VisualStudio.LiveShare.dll
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\bin\Debug\Microsoft.VisualStudio.LiveShare.xml
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.vbprojAssemblyReference.cache
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject_FileUpload.Resources.resources
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject_FileUpload.VBForm.resources
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.vbproj.GenerateResource.cache
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.vbproj.CoreCompileInputs.cache
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.vbproj.CopyComplete
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.exe
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.xml
+C:\Users\sutto\source\repos\OFSProject-FileUpload\OFSProject-FileUpload\obj\Debug\OFSProject-FileUpload.pdb
