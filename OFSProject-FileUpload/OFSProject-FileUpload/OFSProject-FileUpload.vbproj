@@ -605,6 +605,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vars.vb" />
     <Compile Include="VBForm.vb">
       <SubType>Form</SubType>
     </Compile>
