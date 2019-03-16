@@ -25,11 +25,14 @@ Public Class VBForm
 
                     OpenFile.ShowDialog()
 
-                    fName = OpenFile.FileName
+                    Settings.fName = OpenFile.FileName
+
                     client = New AmazonS3Client(Amazon.RegionEndpoint.USEast1)
 
                     Dim bucket = New PutBucketRequest()
-                    bucket.BucketName = Bucketname
+
+                    bucket.BucketName = Settings.Bucketname
+
                     client.PutBucket(bucket)
 
                 Case Button2.Name
