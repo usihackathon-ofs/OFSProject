@@ -14,6 +14,8 @@ Public Class VBForm
 
     Private Sub ButtonClick(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
         Dim btn As Button
+        Const AWS_ACCESS_KEY As String = "put_your_AWS_access_key_here"
+        Const AWS_SECRET_KEY As String = "put_your_AWS_secret_key _here"
         Try
             btn = DirectCast(sender, Button)
             Select Case btn.Name
