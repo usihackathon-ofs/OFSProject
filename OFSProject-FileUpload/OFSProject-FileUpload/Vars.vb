@@ -16,7 +16,7 @@ Module Vars
 
     Public Settings As _Settings
     Public client As IAmazonS3
-
-
+    Public AccessKey As String
+    Public SecretKey As String
 
 End Module

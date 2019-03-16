@@ -14,30 +14,31 @@ Imports System.IO
 Public Class VBForm
     Private Sub VBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Settings.Bucketname = "usitextilesbucket"
+
+        AccessKey = GetSetting("AWS", "Keys", "Private Key")
+        SecretKey = GetSetting("AWS", "Keys", "Common Key")
     End Sub
 
     Private Sub ButtonClick(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
         Dim btn As Button
-
-        client = New AmazonS3Client("AKIAJISGWZWFMHZGCNHQ", "sGGDwP52bCLHmkFY5/HFEEKc/Zc5lH6KA7SyHGpj", Amazon.RegionEndpoint.USEast1)
 
         Try
             btn = DirectCast(sender, Button)
             Select Case btn.Name
 
                 Case Button1.Name
+                    OpenFileDialog.ShowDialog()
+                    Settings.fName = OpenFileDialog.FileName
+                    Button2.Enabled = True
+
+                Case Button2.Name
+                    Dim FileTrans As String
+                    client = New AmazonS3Client(SecretKey, AccessKey, Amazon.RegionEndpoint.USEast1)
                     Settings.Bucketname = "usitextilesbucket"
                     Dim Transfer As New Amazon.S3.Transfer.TransferUtility(client)
                     Dim Uploads As New Amazon.S3.Transfer.TransferUtilityUploadRequest
-
-                    Dim FileTrans As String
-                    OpenFileDialog.ShowDialog()
-                    Settings.fName = OpenFileDialog.FileName
-
-
-                    FileTrans = AddFileToFolder(Settings.fName, Settings.Bucketname, "NEW")
+                    FileTrans = AddFileToFolder(Settings.fName, Settings.Bucketname, "")
                     MessageBox.Show(FileTrans)
-                Case Button2.Name
 
             End Select
 
@@ -75,7 +76,7 @@ Public Class VBForm
     End Function
 
     Public Function AddFileToFolder(FileName As String, bucketName As String, folderName As String) As String
-        Dim returnval As String = "File Success"
+        Dim returnval As String = "File Successfully uploaded"
         Button2.Enabled = True
         Try
             Try
@@ -87,7 +88,7 @@ Public Class VBForm
                 por.StorageClass = S3StorageClass.Standard
                 por.ServerSideEncryptionMethod = ServerSideEncryptionMethod.None
                 por.CannedACL = S3CannedACL.PublicRead
-                por.Key = key
+                por.Key = file.Name
                 por.InputStream = file.OpenRead()
                 client.PutObject(por)
             Catch ex As Exception
@@ -100,15 +101,11 @@ Public Class VBForm
         Return returnval
     End Function
 
-    Private Sub OpenFile_FileOk(sender As Object, e As ComponentModel.CancelEventArgs) Handles OpenFileDialog.FileOk
 
-    End Sub
-
-    Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub PreferencesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreferencesToolStripMenuItem.Click
         Preferences.Show()
     End Sub
+
+
 End Class
