@@ -49,4 +49,8 @@ Public Class VBForm
 
 
     End Sub
+
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+
+    End Sub
 End Class
