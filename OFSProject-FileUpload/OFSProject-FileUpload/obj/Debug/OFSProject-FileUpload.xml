@@ -22,5 +22,10 @@ OFSProject-FileUpload
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:OFSProject_FileUpload.My.Resources.Resources.landscape_2124022_1920">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
