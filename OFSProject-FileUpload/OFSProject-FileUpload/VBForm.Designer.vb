@@ -32,6 +32,7 @@ Partial Class VBForm
         Me.EndToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,9 +111,16 @@ Partial Class VBForm
         '
         'PreferencesToolStripMenuItem
         '
+        Me.PreferencesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FolderToolStripMenuItem})
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
+        '
+        'FolderToolStripMenuItem
+        '
+        Me.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem"
+        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FolderToolStripMenuItem.Text = "Folder"
         '
         'VBForm
         '
@@ -145,5 +153,5 @@ Partial Class VBForm
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreferencesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
-
+    Friend WithEvents FolderToolStripMenuItem As ToolStripMenuItem
 End Class

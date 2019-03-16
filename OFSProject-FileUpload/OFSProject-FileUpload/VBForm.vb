@@ -102,4 +102,8 @@ Public Class VBForm
     Private Sub OpenFile_FileOk(sender As Object, e As ComponentModel.CancelEventArgs) Handles OpenFileDialog.FileOk
 
     End Sub
+
+    Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FolderToolStripMenuItem.Click
+
+    End Sub
 End Class
