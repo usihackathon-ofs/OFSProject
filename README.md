@@ -19,3 +19,7 @@ Github integration is found here: https://visualstudio.github.com/
       - UserName: usi
       - Access key ID: AKIAJLKN7MIDCS2K2U3Q	
       - Secret access key: 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
+      
+      
+      AKIAJISGWZWFMHZGCNHQ
+      sGGDwP52bCLHmkFY5/HFEEKc/Zc5lH6KA7SyHGpj
