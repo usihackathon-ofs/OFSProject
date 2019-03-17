@@ -13,71 +13,39 @@ Imports System.IO
 
 Public Class VBForm
     Private Sub VBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Settings.Bucketname = "usitextilesbucket"
-
         AccessKey = GetSetting("AWS", "Keys", "Private Key")
         SecretKey = GetSetting("AWS", "Keys", "Common Key")
+        Settings.Bucketname = GetSetting("AWS", "Bucketname", "Bucketname")
     End Sub
 
-    Private Sub ButtonClick(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
+    Private Sub ButtonClick(sender As Object, e As EventArgs) Handles btnSelect.Click, btnSubmit.Click
         Dim btn As Button
 
         Try
             btn = DirectCast(sender, Button)
             Select Case btn.Name
-
-                Case Button1.Name
+                Case btnSelect.Name
                     OpenFileDialog.ShowDialog()
                     Settings.fName = OpenFileDialog.FileName
-                    Button2.Enabled = True
+                    btnSubmit.Enabled = True
 
-                Case Button2.Name
+                Case btnSubmit.Name
                     Dim FileTrans As String
                     client = New AmazonS3Client(SecretKey, AccessKey, Amazon.RegionEndpoint.USEast1)
-                    Settings.Bucketname = "usitextilesbucket"
                     Dim Transfer As New Amazon.S3.Transfer.TransferUtility(client)
                     Dim Uploads As New Amazon.S3.Transfer.TransferUtilityUploadRequest
                     FileTrans = AddFileToFolder(Settings.fName, Settings.Bucketname, "")
                     MessageBox.Show(FileTrans)
-
             End Select
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
-
         End Try
-
-
-
     End Sub
 
-    Public Function CreateABucket(bucketName As String) As String
-        Dim returnval As String = ""
-        Try
-            Try
-                Dim putRequest1 As PutBucketRequest = New PutBucketRequest() With {.BucketName = bucketName, .UseClientRegion = True}
-                Dim response1 As PutBucketResponse = client.PutBucket(putRequest1)
-            Catch amazonS3Exception As AmazonS3Exception
-                If amazonS3Exception.ErrorCode = "BucketAlreadyOwnedByYou" Then
-                    returnval = "Bucket already exists"
-                Else
-                    If (Not IsNothing(amazonS3Exception.ErrorCode) And amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId")) Or amazonS3Exception.ErrorCode.Equals("InvalidSecurity") Then
-                        returnval = "Check the provided AWS Credentials."
-                    Else
-                        returnval = String.Format("Error occurred. Message: '{0}' when writing an object", amazonS3Exception.Message)
-                    End If
-                End If
-            End Try
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-            returnval = ""
-        End Try
-        Return returnval
-    End Function
+
 
     Public Function AddFileToFolder(FileName As String, bucketName As String, folderName As String) As String
         Dim returnval As String = "File Successfully uploaded"
-        Button2.Enabled = True
         Try
             Try
                 Dim path As String = FileName

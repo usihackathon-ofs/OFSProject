@@ -23,8 +23,8 @@ Partial Class VBForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VBForm))
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSelect = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,38 +36,38 @@ Partial Class VBForm
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnSelect
         '
-        Me.Button1.AllowDrop = True
-        Me.Button1.BackColor = System.Drawing.SystemColors.Desktop
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.Button1.Location = New System.Drawing.Point(55, 250)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 30)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Select File"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnSelect.AllowDrop = True
+        Me.btnSelect.BackColor = System.Drawing.SystemColors.Desktop
+        Me.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSelect.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnSelect.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSelect.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.btnSelect.Location = New System.Drawing.Point(55, 250)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(120, 30)
+        Me.btnSelect.TabIndex = 0
+        Me.btnSelect.Text = "Select File"
+        Me.btnSelect.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnSubmit
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Button2.Enabled = False
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button2.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.Button2.Location = New System.Drawing.Point(275, 250)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 30)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Submit File"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSubmit.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnSubmit.Enabled = False
+        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnSubmit.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.btnSubmit.Location = New System.Drawing.Point(275, 250)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(120, 30)
+        Me.btnSubmit.TabIndex = 1
+        Me.btnSubmit.Text = "Submit File"
+        Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'OpenFileDialog
         '
@@ -120,11 +120,11 @@ Partial Class VBForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.LightGray
-        Me.Label1.Location = New System.Drawing.Point(36, 283)
+        Me.Label1.Location = New System.Drawing.Point(67, 283)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(173, 13)
+        Me.Label1.Size = New System.Drawing.Size(100, 13)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Only .csv and .xlsx files are allowed"
+        Me.Label1.Text = "Only .csv is allowed"
         '
         'VBForm
         '
@@ -134,8 +134,8 @@ Partial Class VBForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(471, 332)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.btnSelect)
         Me.Controls.Add(Me.MenuStrip1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -150,7 +150,7 @@ Partial Class VBForm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents OpenFileDialog As OpenFileDialog
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
@@ -158,6 +158,6 @@ Partial Class VBForm
     Friend WithEvents EndToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreferencesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSelect As Button
     Friend WithEvents Label1 As Label
 End Class
